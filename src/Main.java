@@ -48,24 +48,35 @@ public class Main {
         System.out.println("В школе,, где " + kolKlass + " классов, нужно " + belClass +
                 " банок белой краски и " + korClass + " банок коричневой краски");
         System.out.println("      Задача 6");
-        int ban = 5*80;
-        int mol = 200 / 100 *105;
+        int ban = 5 * 80;
+        int mol = 200 / 100 * 105;
         int mor = 2 * 100;
-        int yaic = 4*70;
-        int summgr = ban + mol + mor + yaic ;
+        int yaic = 4 * 70;
+        int summgr = ban + mol + mor + yaic;
         float summkg = (float) summgr / 1000;
         System.out.println("вес в граммах : " + summgr + " грамм");
         System.out.println("вес в килограммах : " + summkg + " килограмм");
         System.out.println("      Задача7");
         short terVes1 = 250;
         short terVes2 = 500;
-        int dney1 = 7*1000/terVes1;
-        int dney2 = 7*1000/terVes2;
-        int dneySred = 7*1000/((terVes2+terVes1)/2);
+        int dney1 = 7 * 1000 / terVes1;
+        int dney2 = 7 * 1000 / terVes2;
+        int dneySred = 7 * 1000 / ((terVes2 + terVes1) / 2);
         System.out.println(" если терять по " + terVes1 + " грамм , то :" + dney1 + " дней");
         System.out.println(" если терять по " + terVes2 + " грамм , то :" + dney2 + " дней");
         System.out.println(" в среднем может потребоваться :" + dneySred + " дней");
         System.out.println("      Задча 8");
-
+        int zpMash = 67760;
+        int zpDen = 83690;
+        int zpKr = 76230;
+        int newzpMash = (int) (zpMash * 1.1);
+        int newzpDen = (int) (zpDen * 1.1);
+        int newzpKr = (int) (zpKr * 1.1);
+        int raznMash = newzpMash - zpMash;
+        int raznDen = newzpDen - zpDen;
+        int raznKr = newzpKr - zpKr;
+        System.out.println("Маша теперь получает " + newzpMash + " рублей, разница составляет " + raznMash + " руб.");
+        System.out.println("Денис теперь получает " + newzpDen + " рублей, разница составляет " + raznDen + " руб.");
+        System.out.println("Кристина теперь получает " + newzpKr + " рублей, разница составляет " + raznKr + " руб.");
     }
 }
