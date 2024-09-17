@@ -1,3 +1,6 @@
+import java.text.DecimalFormat;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("      Задача 1");
@@ -31,52 +34,52 @@ public class Main {
         short listovOdnomy = (short) (itogoListov / itogoUchenikov);
         System.out.println("На каждого ученика рассчитано : " + listovOdnomy + " листов бумаги");
         System.out.println("      Задача 4");
-        byte pr2 = 16; // pr2 - производительность за 2 минуты
-        short pr20 = (short) (pr2 * 10);
-        System.out.println("За 20 минут машина произвела: " + pr20 + " штук бутылок");
-        int prSutki = pr20 * 3 * 24;
-        int prSutki3 = prSutki * 3;
-        System.out.println("За сутки машина произвела: " + prSutki + " штук бутылок");
-        System.out.println("За 3 дня машина произвела: " + prSutki3 + " штук бутылок");
-        long prMesyc = (long) prSutki * 30;
-        System.out.println("За месяц машина произвела: " + prMesyc + " штук бутылок");
+        byte bottlesPerTwoMinutes = 16; //  производительность за 2 минуты
+        short bottlesPerTwentyMinutes = (short) (bottlesPerTwoMinutes * 10);
+        System.out.println("За 20 минут машина произвела: " + bottlesPerTwentyMinutes + " штук бутылок");
+        int bottlesPerDay = bottlesPerTwentyMinutes * 3 * 24;
+        int bottlesPer3Day = bottlesPerDay * 3;
+        System.out.println("За сутки машина произвела: " + bottlesPerDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела: " + bottlesPer3Day + " штук бутылок");
+        long bottlesPerMonth = bottlesPerDay * 30L;
+        System.out.println("За месяц машина произвела: " + bottlesPerMonth + " штук бутылок");
         System.out.println("      Задача 5");
-        int allBanok = 120;
-        int kolKlass = allBanok / 6;
-        int belClass = kolKlass * 2;
-        int korClass = kolKlass * 4;
-        System.out.println("В школе,, где " + kolKlass + " классов, нужно " + belClass +
-                " банок белой краски и " + korClass + " банок коричневой краски");
+        int allBanokKraski = 120;
+        int allKolClass = allBanokKraski / 6;
+        int belBanokKraski = allKolClass * 2;
+        int korBanokKraski = allKolClass * 4;
+        System.out.println("В школе,, где " + allKolClass + " классов, нужно " + belBanokKraski +
+                " банок белой краски и " + korBanokKraski + " банок коричневой краски");
         System.out.println("      Задача 6");
-        int ban = 5 * 80;
-        int mol = 200 / 100 * 105;
-        int mor = 2 * 100;
-        int yaic = 4 * 70;
-        int summgr = ban + mol + mor + yaic;
-        float summkg = (float) summgr / 1000;
-        System.out.println("вес в граммах : " + summgr + " грамм");
-        System.out.println("вес в килограммах : " + summkg + " килограмм");
+        int bananofGramm = 5 * 80;
+        int molokaGramm = 200 / 100 * 105;
+        int morogenovaGramm = 2 * 100;
+        int yaicaGramm = 4 * 70;
+        int summaVsehIngridientovGgamm = bananofGramm + molokaGramm + morogenovaGramm + yaicaGramm;
+        float summaVsehIngridientovKg = summaVsehIngridientovGgamm / 1000F;
+        System.out.println("вес в граммах : " + summaVsehIngridientovGgamm + " грамм");
+        System.out.println("вес в килограммах : " + summaVsehIngridientovKg + " килограмм");
         System.out.println("      Задача7");
-        short terVes1 = 250;
-        short terVes2 = 500;
-        int dney1 = 7 * 1000 / terVes1;
-        int dney2 = 7 * 1000 / terVes2;
-        int dneySred = 7 * 1000 / ((terVes2 + terVes1) / 2);
-        System.out.println(" если терять по " + terVes1 + " грамм , то :" + dney1 + " дней");
-        System.out.println(" если терять по " + terVes2 + " грамм , то :" + dney2 + " дней");
-        System.out.println(" в среднем может потребоваться :" + dneySred + " дней");
+        short poteryaVesaGr1 = 250;
+        short poteryaVesaGr2 = 500;
+        int skolkoDneyTeryatPri1 = 7 * 1000 / poteryaVesaGr1;
+        int skolkoDneyTeryatPri2 = 7 * 1000 / poteryaVesaGr2;
+        int skolkoDneyTeryatVsrednem = (7 * 1000) / ((poteryaVesaGr2 + poteryaVesaGr1) / 2);
+        System.out.println(" если терять по " + poteryaVesaGr1 + " грамм , то :" + skolkoDneyTeryatPri1 + " дней");
+        System.out.println(" если терять по " + poteryaVesaGr2 + " грамм , то :" + skolkoDneyTeryatPri2 + " дней");
+        System.out.println(" в среднем может потребоваться :" + skolkoDneyTeryatVsrednem + " дней");
         System.out.println("      Задча 8");
         int zpMash = 67760;
         int zpDen = 83690;
         int zpKr = 76230;
-        int newzpMash = (int) (zpMash * 1.1);
-        int newzpDen = (int) (zpDen * 1.1);
-        int newzpKr = (int) (zpKr * 1.1);
-        int raznMash = newzpMash - zpMash;
-        int raznDen = newzpDen - zpDen;
-        int raznKr = newzpKr - zpKr;
-        System.out.println("Маша теперь получает " + newzpMash + " рублей, разница составляет " + raznMash + " руб.");
-        System.out.println("Денис теперь получает " + newzpDen + " рублей, разница составляет " + raznDen + " руб.");
-        System.out.println("Кристина теперь получает " + newzpKr + " рублей, разница составляет " + raznKr + " руб.");
+        int newZpMash = (int) (zpMash * 1.1);
+        int newZpDen = (int) (zpDen * 1.1);
+        int newZpKr = (int) (zpKr * 1.1);
+        int raznMash = newZpMash - zpMash;
+        int raznDen = newZpDen - zpDen;
+        int raznKr = newZpKr - zpKr;
+        System.out.println("Маша теперь получает " + newZpMash + " рублей, разница составляет " + raznMash + " руб.");
+        System.out.println("Денис теперь получает " + newZpDen + " рублей, разница составляет " + raznDen + " руб.");
+        System.out.println("Кристина теперь получает " + newZpKr + " рублей, разница составляет " + raznKr + " руб.");
     }
 }
